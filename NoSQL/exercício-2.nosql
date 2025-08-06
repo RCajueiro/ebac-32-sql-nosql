@@ -10,5 +10,4 @@ db.biblioteca.find({title: {$regex: /MongoDB|SQL Server/}}, {title: true}).count
 db.biblioteca.find({isbn: {$regex: /^18/}}, {isbn: true}).count()
 
 //Usando Expressão Regular, busque a quantidade de livros que contém a palavra JAVA ou Mobile na descrição do livro (LongDescription), lembrando que deve trazer todas as palavras independente de começa com maiúsculo ou minúsculo
-
 db.biblioteca.find({  longDescription: {  $regex: /(java|mobile)/i } }, { longDescription: 1 }).count()
