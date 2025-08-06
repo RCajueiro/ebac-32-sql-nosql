@@ -1,0 +1,14 @@
+//Nas mesmas buscas do exercício anterior, traga apenas o número do resultado usando o contador
+
+//Quantos livros não estão com o status publicado e pageCount menor que 300
+db.biblioteca.find({status: {$nin: ["PUBLISH"]}, pageCount: {$lt: 300}}).count()
+
+//Quantos livros que contém as palavras MongoDB e SQL Server no título
+db.biblioteca.find({title: {$regex: /MongoDB|SQL Server/}}, {title: true}).count()
+
+//Faça uma contagem, usando expressão regular, de quantos ISBN começam com 18
+db.biblioteca.find({isbn: {$regex: /^18/}}, {isbn: true}).count()
+
+//Usando Expressão Regular, busque a quantidade de livros que contém a palavra JAVA ou Mobile na descrição do livro (LongDescription), lembrando que deve trazer todas as palavras independente de começa com maiúsculo ou minúsculo
+
+db.biblioteca.find({  longDescription: {  $regex: /(java|mobile)/i } }, { longDescription: 1 }).count()
