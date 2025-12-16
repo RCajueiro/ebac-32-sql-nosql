@@ -18,7 +18,7 @@ ebac-32-sql-nosql/
 
 ## 👤 Autor
 
-**RCajueiro** - *Resolução da atividade do módulo 32 do curso EBAC*.
+**Ramon Cajueiro** - *Resolução da atividade do módulo 32 do curso EBAC*.
 
 ---
 
